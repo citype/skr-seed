@@ -46,7 +46,7 @@ def splitAddress(address):
 def getRandomExternalLink(startingPage):
     print("---->",startingPage)
     html = urlopen(startingPage)
-    bsObj = BeautifulSoup(html,'lxml')
+    bsObj = BeautifulSoup(html, 'lxml')
     externalLinks = getExternalLinks(bsObj, urlparse(startingPage).netloc)
     if len(externalLinks) == 0:
         print("No external links, looking arround the site for one")
